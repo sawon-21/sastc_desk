@@ -1,0 +1,17 @@
+{
+  "name": "SASTC Desk",
+  "short_name": "SASTC Desk",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0e17",
+  "theme_color": "#0f0e17",
+  "description": "Best experience",
+  "icons": [
+    
+    {
+      "src": "icon.png",
+      "sizes": "612x612",
+      "type": "image/png"
+    }
+  ]
+}
