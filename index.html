@@ -3,166 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SASTC DESK </title>
-    <meta name="theme-color" content="#121212" />
+  <title>SASTC DESK</title>
+  <meta name="theme-color" content="#121212" />
   <meta name="description" content="SASTC DESK" />
   <link rel="manifest" href="manifest.json" />
+  
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZM5F51"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DXNDZM5F51');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZM5F51"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DXNDZM5F51');
+  </script>
+  
   <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="icon.png" />
   <link rel="apple-touch-icon" href="icon.png" />
+  
   <!-- Consolidated Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <!-- Consolidated Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
   <!-- Consolidated Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS File -->
   <style>
-@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
 
-    :root {
-      --primary: #8B5CF6;
-      --primary-light: #A78BFA;
-      --primary-dark: #7C3AED;
-      --dark: #111827;
-      --dark-light: #1F2937;
-      --card-bg: #1F2937;
-      --success: #10B981;
-      --danger: #EF4444;
-      --warning: #F59E0B;
-      --info: #3B82F6;
-      --new-highlight: rgba(139, 92, 246, 0.2);
-      --text-muted: #9CA3AF;
-      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    }
+:root {
+  --primary: #8B5CF6;
+  --primary-light: #A78BFA;
+  --primary-dark: #7C3AED;
+  --dark: #111827;
+  --dark-light: #1F2937;
+  --card-bg: #1F2937;
+  --success: #10B981;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --info: #3B82F6;
+  --new-highlight: rgba(139, 92, 246, 0.2);
+  --text-muted: #9CA3AF;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
 
-    body {
-      background: #F3F3F3;
-      color: white;
-      font-family: 'Hind Siliguri', sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-      animation: gradientShift 15s ease infinite;
-      background-size: 200% 200%;
-    }
+body {
+  background: #0f131b;
+  color: white;
+  font-family: 'Hind Siliguri', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.container {
+  max-width: 1200px;
+  padding: 2px;
+}
 
-    .container {
-      max-width: 1200px;
-      padding: 2px;
-    }
-    h5{
-      font-size:17px;
-    }
-    .header {
-      background: #404751;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding: 1rem 0;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
+h5 {
+  font-size: 17px;
+}
 
-    .app-title {
-      font-weight: 400;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #EC4899 0%, yellow 50%, #3B82F6 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-size: 1.5rem;
-      font-family: "Bitcount Grid Double", system-ui;
-      animation: titleGradient 8s ease infinite;
-      background-size: 200% 200%;
-    }
+/* Auth Page Styles */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f131b 0%, #1a1f2e 100%);
+}
 
-    @keyframes titleGradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
 
-    .post-card {
-      background: #0f131b;
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(255,255,255,0.05);
-      box-shadow: var(--card-shadow);
-      position: relative;
-      overflow: hidden;
-      backdrop-filter: blur(5px);
-    }
+.auth-form-container {
+  animation: fadeIn 0.5s ease;
+}
 
-    .post-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-      border-color: blue;
-      background: #0f131b;
-    }
+.auth-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 10px;
+  padding: 12px 15px;
+  transition: all 0.3s;
+}
 
-    .post-card.new::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: red;
-    }
-     .post-card.new {
-      background: #000035;
-    }   
-    .post-card.new::after {
-      content: 'LATEST';
-      position: absolute;
-      top: 10px;
-      right: -30px;
-      width: 100px;
-      text-align: center;
-      background: linear-gradient(45deg, red, black);
-      color: white;
-      font-size: 0.7rem;
-      font-weight: bold;
-      transform: rotate(45deg);
-      padding: 2px 0;
-      box-shadow: 0 2px 10px yellow;
-      z-index: 1;
-    }
+.auth-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
 
-    .post-type {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.3s;
-    }
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-link {
+  color: var(--primary-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+}
+
+/* User Info Styles */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+}
+
+.user-id {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.user-name-sm {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Header */
+.header {
+  background: #404751;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 1rem 0;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #EC4899 0%, yellow 50%, #3B82F6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-family: "Bitcount Grid Double", system-ui;
+  animation: titleGradient 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes titleGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Post Card */
+.post-card {
+  background: #0f131b;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border-color: blue;
+  background: #0f131b;
+}
+
+.post-card.new::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: red;
+}
+
+.post-card.new {
+  background: #000035;
+}
+
+.post-card.new::after {
+  content: 'LATEST';
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  width: 100px;
+  text-align: center;
+  background: linear-gradient(45deg, red, black);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  padding: 2px 0;
+  box-shadow: 0 2px 10px yellow;
+  z-index: 1;
+}
+
+.post-type {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
+
 .type-classes {   
-  background: #0ea5e9;  /* নীল-সায়ান */
+  background: #0ea5e9;
   color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.3);  /* নীল-সায়ান শ্যাডো */
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.3);
 }
 
 .type-notice {   
@@ -172,7 +296,7 @@
 }
 
 .type-important {   
-  background: #ff4d4f; /* লাল */
+  background: #ff4d4f;
   color: #fff;  
   box-shadow: 0 4px 6px -1px rgba(255, 77, 79, 0.3);  
 }
@@ -190,31 +314,31 @@
 }
 
 .type-exam {   
-  background: #2563eb; /* নীল */
+  background: #2563eb;
   color: #fff;  
   box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);  
 }
 
 .type-resources {   
-  background: #059669; /* সবুজ */
+  background: #059669;
   color: #fff;  
   box-shadow: 0 4px 6px -1px rgba(5, 150, 105, 0.3);  
 }
 
 .type-event {   
-  background: #f97316; /* কমলা */
+  background: #f97316;
   color: #fff;  
   box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.3);  
 }
 
 .type-tips {   
-  background: lime; /* সায়ান */
+  background: lime;
   color: #000;  
   box-shadow: 0 4px 6px -1px lime;  
 }
 
 .type-suggestion {   
-  background: #9333ea; /* বেগুনি */
+  background: #9333ea;
   color: #fff;  
   box-shadow: 0 4px 6px -1px rgba(147, 51, 234, 0.3);  
 }
@@ -225,393 +349,446 @@
   box-shadow: 0 4px 6px -1px rgba(55, 65, 81, 0.3);  
 }
 
-    .post-image-container {
-      position: relative;
-      width: 100%;
-      border-radius: 12px;
-      margin: 16px 0;
-      overflow: hidden;
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-    }
+.post-image-container {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  margin: 16px 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
 
-    .post-image {
-      width: 100%;
-      border-radius: 12px;
-      max-height: 400px;
-      object-fit: cover;
-      transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
+.post-image {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
 
-    .post-image-container:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.3);
-    }
+.post-image-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+}
 
-    .post-image-container:hover .post-image {
-      transform: scale(1.05);
-    }
+.post-image-container:hover .post-image {
+  transform: scale(1.05);
+}
 
-    .post-image-container::after {
-      content: '\F33E';
-      font-family: 'bootstrap-icons';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2rem;
-      color: white;
-      opacity: 0;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-      transition: all 0.3s ease;
-      pointer-events: none;
-    }
+.post-image-container::after {
+  content: '\F33E';
+  font-family: 'bootstrap-icons';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
 
-    .post-image-container:hover::after {
-      opacity: 0.8;
-      transform: translate(-50%, -50%) scale(1.2);
-    }
+.post-image-container:hover::after {
+  opacity: 0.8;
+  transform: translate(-50%, -50%) scale(1.2);
+}
 
-    .lightbox {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.95);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
 
-    .lightbox.active {
-      opacity: 1;
-      pointer-events: all;
-    }
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
 
-    .lightbox-img {
-      max-width: 90%;
-      max-height: 90%;
-      object-fit: contain;
-      border-radius: 8px;
-      transform: scale(0.9);
-      transition: transform 0.3s ease;
-    }
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
 
-    .lightbox.active .lightbox-img {
-      transform: scale(1);
-    }
+.lightbox.active .lightbox-img {
+  transform: scale(1);
+}
 
-    .lightbox-close {
-      position: absolute;
-      top: 30px;
-      right: 30px;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-      background: rgba(255,255,255,0.1);
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-    }
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: rgba(255,255,255,0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
 
-    .lightbox-close:hover {
-      background: rgba(255,255,255,0.2);
-      transform: rotate(90deg);
-    }
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.2);
+  transform: rotate(90deg);
+}
 
-    .reaction-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 20px;
-    }
+/* Reaction Buttons */
+.reaction-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
 
-    .reaction-btn {
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.9rem;
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      font-weight: 600;
-      position: relative;
-      overflow: hidden;
-    }
+.reaction-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
 
-    .reaction-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-      transform: translateX(-100%);
-      transition: transform 0.4s ease;
-    }
+.reaction-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
 
-    .reaction-btn:hover::before {
-      transform: translateX(100%);
-    }
+.reaction-btn:hover::before {
+  transform: translateX(100%);
+}
 
-    .reaction-btn:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+.reaction-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .reaction-btn.like.active {
-      background: var(--success);
-      color: white;
-      box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
-    }
+.reaction-btn.like.active {
+  background: var(--success);
+  color: white;
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
 
-    .reaction-btn.dislike.active {
-      background: var(--danger);
-      color: white;
-      box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
-    }
+.reaction-btn.dislike.active {
+  background: var(--danger);
+  color: white;
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
 
-    .empty-state {
-      background: rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 60px 20px;
-      text-align: center;
-      margin-top: 40px;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255,255,255,0.1);
-      animation: pulse 2s infinite;
-    }
+.reaction-btn.comment-btn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
-    }
+.reaction-btn.comment-btn:hover {
+  background: rgba(59, 130, 246, 0.3);
+}
 
-    .empty-state i {
-      font-size: 3.5rem;
-      opacity: 0.5;
-      margin-bottom: 1.5rem;
-      animation: float 3s ease-in-out infinite;
-    }
+.reaction-btn.bookmark.active {
+  background: var(--warning);
+  color: #000;
+}
 
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
-    }
+.reaction-btn.share-btn {
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--primary);
+}
 
-    .time-badge {
-      font-size: 0.75rem;
-      background: rgba(255,255,255,0.1);
-      padding: 5px 12px;
-      border-radius: 20px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.3s;
-    }
+.reaction-btn.share-btn:hover {
+  background: rgba(139, 92, 246, 0.3);
+}
 
-    .time-badge:hover {
-      background: rgba(255,255,255,0.2);
-      transform: scale(1.05);
-    }
+/* Empty State */
+.empty-state {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 40px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.1);
+  animation: pulse 2s infinite;
+}
 
-    .search-box {
-      background: rgba(255,255,255,0.1);
-      border: none;
-      color: white;
-      border-radius: 20px;
-      padding: 2px 20px;
-      width: 100%;
-      max-width: 400px;
-      transition: all 0.3s;
-      font-size: 0.95rem;
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
+}
 
-    .search-box:focus {
-      background: #131313;
-      color: white;
-      box-shadow: 0 0 0 1px #3B82F6;
-      outline: none;
-    }
+.empty-state i {
+  font-size: 3.5rem;
+  opacity: 0.5;
+  margin-bottom: 1.5rem;
+  animation: float 3s ease-in-out infinite;
+}
 
-    .filter-btn {
-      background: #F3F3F3;
-      border: none;
-      color: #131313;
-      border-radius: 15px;
-      padding: 8px 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.8rem;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      font-weight: 800;
-      backdrop-filter: blur(50px);
-      border: 1px solid #131313;
-    }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 
-    .filter-btn:hover {
-      background: #0d6e99;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+.time-badge {
+  font-size: 0.75rem;
+  background: rgba(255,255,255,0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s;
+}
 
-    .filter-btn.active {
-      background: #0d6efd;
-      box-shadow: 2 4px 6px -1px rgba(13,110,253,255);
-      border-color: #131313;
-    }
+.time-badge:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
 
-    .filters-row-wrapper {
-      position: sticky;
-      top: 0px;
-      z-index: 999;
-      padding: 10px 0;
-      overflow-x: auto;
-      white-space: nowrap;
-      backdrop-filter: blur(100px);
-      border-bottom: 1px solid #ddd;
-    }
+/* Search Box */
+.search-box {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s;
+  font-size: 0.95rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
 
-    .filters-row-wrapper::-webkit-scrollbar {
-      display: none;
-    }
+.search-box:focus {
+  background: #131313;
+  color: white;
+  box-shadow: 0 0 0 1px #3B82F6;
+  outline: none;
+}
 
-    .filter-btn {
-      display: inline-block;
-      margin: 0 5px;
-      white-space: nowrap;
-    }
+/* Filter Buttons */
+.filter-btn {
+  background: #F3F3F3;
+  border: none;
+  color: #131313;
+  border-radius: 15px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  font-weight: 800;
+  backdrop-filter: blur(50px);
+  border: 1px solid #131313;
+}
 
-    .post-content {
-      line-height: 1.1;
-      font-size:10px;
-      color: rgba(255,255,255,0.9);
-    }
-    .post-content:hover {
-      line-height: 1.7;
-      font-size:20px;
-      color: rgba(255,255,255,0.9);
-    }
-    .post-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      flex-wrap: wrap;
-    }
+.filter-btn:hover {
+  background: #0d6e99;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
 
-    .post-title {
-      font-weight: 700;
-      margin-bottom: 12px;
-      font-size: 1.5rem;
-      line-height: 1.3;
-      color: white;
-      position: relative;
-      display: inline-block;
-    }
+.filter-btn.active {
+  background: #0d6efd;
+  box-shadow: 2 4px 6px -1px rgba(13,110,253,255);
+  border-color: #131313;
+}
 
-    .post-title::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--primary), transparent);
-      border-radius: 3px;
-      transition: width 0.3s ease;
-    }
+/* Filters Row */
+.filters-row-wrapper {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  padding: 10px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  backdrop-filter: blur(100px);
+  border-bottom: 1px solid #ddd;
+}
 
-    .post-card:hover .post-title::after {
-      width: 100%;
-    }
+.filters-row-wrapper::-webkit-scrollbar {
+  display: none;
+}
 
-    .post-detail-label {
-      font-weight: 600;
-      color: var(--primary-light);
-      margin-right: 8px;
-    }
+.filter-btn {
+  display: inline-block;
+  margin: 0 5px;
+  white-space: nowrap;
+}
 
-    .link-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 1px;
-      background: gold;
-      font-family: 'Poppins', sans-serif;
-      color: black;
-      padding: 5px 50px;
-      border-radius: 19px;
-      text-decoration: none;
-      font-weight: 900;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
+/* Post Content */
+.post-content {
+  line-height: 1.6;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 15px;
+  position: relative;
+}
 
-    .link-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: all 0.5s ease;
-    }
+.post-content.expanded {
+  max-height: none;
+}
 
-    .link-btn:hover::before {
-      left: 100%;
-    }
+.read-more {
+  color: #3B82F6;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 5px;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
 
-    .link-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4);
-      color: white;
-    }
+.read-more:hover {
+  background: rgba(59, 130, 246, 0.2);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
 
-    /* Skeleton Loading */
-    .skeleton {
-      background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, #0f131b 50%, rgba(255,255,255,0.1) 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-      border-radius: 8px;
-      backdrop-filter: blur(50px);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
 
-    @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
+.post-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
 
-    .skeleton-card {
-      height: 150px;
-      margin-bottom: 24px;
-      border-radius: 16px;
-    }
-    .toast-message {
+.post-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.post-card:hover .post-title::after {
+  width: 100%;
+}
+
+.post-detail-label {
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-right: 8px;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  background: gold;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  padding: 5px 50px;
+  border-radius: 19px;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.link-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.link-btn:hover::before {
+  left: 100%;
+}
+
+.link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.4);
+  color: white;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, #0f131b 50%, rgba(255,255,255,0.1) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-card {
+  height: 150px;
+  margin-bottom: 24px;
+  border-radius: 16px;
+}
+
+/* Toast Message */
+.toast-message {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -632,675 +809,1620 @@
   opacity: 1;
   transform: translateX(-50%) translateY(-5px);
 }
-/*Install Promt */
-    .install-prompt {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: #00072D;
-      color: white;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      animation: fadeIn 0.3s ease forwards;
-      text-align: center;
-      padding: 20px;
-    }
 
-    .install-prompt h1 {
-      font-weight: bold;
-    }
-
-    .install-prompt p {
-      color: var(--primary-light);
-      max-width: 300px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @media (display-mode: standalone) {
-      .install-prompt {
-        display: none !important;
-      }
-    }
-    /* Floating particles background */
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .particle {
-      position: absolute;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      animation: float-particle 15s infinite linear;
-    }
-   /* install design buttons */ 
-    .filter-bar {
-  display: flex;
-  flex-wrap: wrap; /* allow buttons to go to next line if needed */
-  gap: 10px; /* space between buttons */
-  padding: 10px;
+/* Install Prompt */
+.install-prompt {
+  display:none;
+  position: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #00072D;
+  color: white;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
   justify-content: center;
-  border-radius: 8px;
-  align-items:center;
-  max-width: 100%; /* full width */
+  align-items: center;
+  animation: fadeIn 0.3s ease forwards;
+  text-align: center;
+  padding: 20px;
 }
 
-.filter-bar > div {
+.install-prompt h1 {
+  font-weight: bold;
+}
 
+.install-prompt p {
+  color: var(--primary-light);
+  max-width: 300px;
+}
+
+@media (display-mode: standalone) {
+  .install-prompt {
+    display: none !important;
+  }
+}
+
+/* Floating particles background */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: float-particle 15s infinite linear;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Page Styles */
+.page {
+  display: block;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.back-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   color: white;
-  padding: 8px 15px;
-  border-radius: 20px; /* pill shape */
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateX(-3px);
+}
+
+/* Full Post Content */
+.full-post-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 30px;
+  white-space: pre-wrap;
+}
+
+/* Comments Section */
+.comments-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.comment-item {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+  animation: fadeIn 0.3s ease;
+}
+
+.comment-item:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--primary-light);
   font-size: 14px;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.comment-text {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.reply-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px; /* space between icon and text */
-  transition: background-color 0.3s ease;
-  user-select: none; /* prevent text selection on click */
+  gap: 5px;
+  transition: color 0.3s;
+  padding: 4px 8px;
+  border-radius: 6px;
 }
 
-.filter-bar > div:hover {
-  background-color: #0056b3; /* darker blue on hover */
+.reply-btn:hover {
+  color: var(--primary-light);
+  background: rgba(139, 92, 246, 0.1);
 }
-.info-link{
-      border: none;
-      color: white;
-      border-radius: 20px;
-      padding: 8px 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.3rem;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      font-weight: 800;
+
+.reply-section {
+  margin-left: 30px;
+  margin-top: 10px;
+  border-left: 2px solid rgba(255,255,255,0.1);
+  padding-left: 15px;
 }
-.info-link:hover{
-  color: green;
-  font-size: 1.5rem;
+
+.reply-item {
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  animation: fadeIn 0.3s ease;
 }
-    @keyframes float-particle {
-      0% {
-        transform: translateY(0) translateX(0);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) translateX(100px);
-        opacity: 0;
-      }
-    }
 
-    @media (max-width: 992px) {
-      .container {
-        padding: 10px;
-      }
+.reply-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  animation: fadeIn 0.3s ease;
+}
 
-      .search-box {
-        max-width: 100%;
-      }
-    }
+.reply-input {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+}
 
-    @media (max-width: 768px) {
-      .post-card {
-        padding: 20px;
-      }
+.reply-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
 
-      .header {
-        padding: 0.8rem 0;
-      }
+.comment-form {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+}
 
-      .post-title {
-        font-size: 1.3rem;
-      }
+.comment-input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
 
-      .app-title {
-        font-size: 1.5rem;
-      }
-    }
+.comment-input {
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: white;
+  font-size: 14px;
+}
 
-    @media (max-width: 576px) {
-      .post-card {
-        padding: 18px;
-      }
+.comment-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
 
-      .post-title {
-        font-size: 1.2rem;
-      }
-    }
+.comment-submit-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
 
-    /* Title animation cursor */
-    #animatedTitle::after {
-      content: "|";
-      animation: blink 1s infinite;
-      color: white;
-    }
+.comment-submit-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
 
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-        video { display: none; }
-        
-        .exam-card {
-    margin-left: 20px;
-    margin-right: 20px;
-        background: #1a1d24;
-        padding: 14px 12px;
-        margin-bottom: 14px;
-        border-radius: 14px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.40);
-        transition: 0.25s;
-    }
+.comment-count {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255,255,255,0.1);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  margin-left: auto;
+}
 
-    .exam-card:hover {
-        transform: scale(1.02);
-        background: #20242f;
-    }
+/* Exam Cards */
+.exam-card {
+  margin-left: 20px;
+  margin-right: 20px;
+  background: #1a1d24;
+  padding: 14px 12px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.40);
+  transition: 0.25s;
+}
 
-    .alert-red {
-        background: #2a0f0f !important;
-        border: 1px solid #ff4d4d;
-    }
+.exam-card:hover {
+  transform: scale(1.02);
+  background: #20242f;
+}
 
-    .row-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+.alert-red {
+  background: #2a0f0f !important;
+  border: 1px solid #ff4d4d;
+}
 
-    .date-box {
-        font-size: 15px;
-        font-weight: 600;
-        line-height: 18px;
-        opacity: 0.85;
-    }
+.row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .subject {
-        font-size: 17px;
-        font-weight: 700;
-        text-align: center;
-        color: #4dabff;
-        flex-grow: 1;
-    }
+.date-box {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  opacity: 0.85;
+}
 
-    .days {
-        font-size: 15px;
-        font-weight: 700;
-        padding: 6px 10px;
-        border-radius: 10px;
-        background: #13161d;
-        border: 1px solid #303644;
-        color: #3fb950;
-    }
+.subject {
+  font-size: 17px;
+  font-weight: 700;
+  text-align: center;
+  color: #4dabff;
+  flex-grow: 1;
+}
 
-    .days.red-text {
-        color: #ff4d4d !important;
-        border-color: #ff4d4d !important;
-    }
+.days {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #13161d;
+  border: 1px solid #303644;
+  color: #3fb950;
+}
 
-    /* Exam gap line */
-    .next-gap {
-        font-size: 13px;
-        opacity: 0.75;
-        margin-left: 2px;
-    }
+.days.red-text {
+  color: #ff4d4d !important;
+  border-color: #ff4d4d !important;
+}
 
-    .title {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        color: #4dabff;
-    }
-    
+/* Exam gap line */
+.next-gap {
+  font-size: 13px;
+  opacity: 0.75;
+  margin-left: 2px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #4dabff;
+}
+
+/* Offline Popup */
+#offlinePopup {
+  display: ;
+  position: ;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255,77,79,0.8);
+  color: white;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  z-index: 99999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+#offlinePopup i {
+  font-size: 1.9rem;
+}
+
+/* Title animation cursor */
+#animatedTitle::after {
+  content: "|";
+  animation: blink 1s infinite;
+  color: white;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    padding: 10px;
+  }
+  .search-box {
+    max-width: 100%;
+  }
+  .auth-container {
+    margin: 20px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-card {
+    padding: 20px;
+  }
+  .header {
+    padding: 0.8rem 0;
+  }
+  .post-title {
+    font-size: 1.3rem;
+  }
+  .app-title {
+    font-size: 1.5rem;
+  }
+  .comment-input-group {
+    flex-direction: column;
+  }
+  .reply-form {
+    flex-direction: column;
+  }
+  .user-info {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .post-card {
+    padding: 18px;
+  }
+  .post-title {
+    font-size: 1.2rem;
+  }
+  .app-title {
+    font-size: 1.3rem;
+  }
+  .auth-container {
+    padding: 20px;
+  }
+  .reaction-buttons {
+    flex-wrap: wrap;
+  }
+  .reaction-btn {
+    flex: 1;
+    min-width: 80px;
+    justify-content: center;
+  }
+}
+
+video { 
+  display: none; 
+}
   </style>
 </head>
 <body>
-<!-- Floating particles background -->
-<div class="particles" id="particles"></div>
-  <video id="video" autoplay playsinline></video>
-<!-- Lightbox for images -->
-<div class="lightbox" id="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-img" id="lightbox-img" alt="Enlarged view">
-</div>
+  <!-- Floating particles background -->
+  <div class="particles" id="particles"></div>
+  
+  <!-- Lightbox for images -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" alt="Enlarged view">
+  </div>
 
-<div class="header">
-  <div class="container">
-    <h1 class="app-title mb-0" id="animatedTitle"></h1>
-    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
-      <div class="d-flex gap-2">
-        <input type="text" class="search-box" id="searchInput" placeholder="Search posts...">
-<button class="filter-btn" id="bookmarkBtn">
-  <i class="bi bi-bookmark-fill"></i>
-  <span class="d-none d-md-inline">Bookmarks</span>
-</button>
-<button class="filter-btn" id="weeklyPopularBtn">
-  <i class="bi bi-bar-chart-line"></i>
-  <span class="d-none d-md-inline">Weekly Popular</span>
-</button>
-        <a href="info-preview.html" class="info-link">
-  <i class="bi bi-info-circle-fill"></i>
-  <span class="d-none d-md-inline">Info</span>
-</a>
+  <!-- Auth Page -->
+  <div id="authPage" class="page auth-page">
+    <div class="auth-container">
+      <div class="text-center mb-4">
+        <img src="https://i.postimg.cc/7YZc66rC/icon.png" width="120px" class="mb-3">
+        <h1 class="app-title">SASTC DESK</h1>
+        <p class="text-muted">Student Academic Portal</p>
+      </div>
+      
+      <div class="auth-form-container" id="loginForm">
+        <h3 class="mb-4 text-center">Sign In</h3>
+        <div class="form-group mb-3">
+          <label class="form-label">Student ID</label>
+          <input type="number" id="loginStudentId" class="form-control auth-input" placeholder="Enter your student ID" maxlength="20">
+        </div>
+        <div class="form-group mb-4">
+          <label class="form-label">Password</label>
+          <input type="password" id="loginPassword" class="form-control auth-input" placeholder="Enter your password">
+        </div>
+        <button class="btn btn-primary w-100 mb-3" onclick="login()">Sign In</button>
+        <div id="loginError" class="text-danger text-center mb-3" style="display: none;"></div>
+        <p class="text-center mb-0">
+          Don't have an account? 
+          <a href="#" class="auth-link" onclick="showSignup()">Sign Up</a>
+        </p>
+      </div>
+      
+      <div class="auth-form-container" id="signupForm" style="display: none;">
+        <h3 class="mb-4 text-center">Sign Up</h3>
+        <div class="form-group mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" id="signupName" class="form-control auth-input" placeholder="Enter your full name" maxlength="50">
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label">Student ID</label>
+          <input type="text" id="signupStudentId" class="form-control auth-input" placeholder="Enter your student ID" maxlength="20">
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label">Email </label>
+          <input type="email" id="signupEmail" class="form-control auth-input" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" id="signupPassword" class="form-control auth-input" placeholder="Create a password (min. 6 chars)">
+        </div>
+        <div class="form-group mb-4">
+          <label class="form-label">Confirm Password</label>
+          <input type="password" id="signupConfirmPassword" class="form-control auth-input" placeholder="Confirm your password">
+        </div>
+        <button class="btn btn-primary w-100 mb-3" onclick="signup()">Create Account</button>
+        <div id="signupError" class="text-danger text-center mb-3" style="display: none;"></div>
+        <p class="text-center mb-0">
+          Already have an account? 
+          <a href="#" class="auth-link" onclick="showLogin()">Sign In</a>
+        </p>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Sticky + Scrollable Filter Bar -->
-<div class="filters-row-wrapper px-3">
-  <button class="btn btn-outline-primary filter-btn active" data-filter="all">
-    <i class="bi bi-collection"></i> All
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="classes">
-    <i class="bi bi-journal-bookmark"></i> Classes
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="notice">
-    <i class="bi bi-megaphone"></i> Notice
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="important">
-    <i class="bi bi-exclamation-triangle"></i> Important
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="resources">
-    <i class="bi bi-folder2-open"></i> Resources
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="exam">
-    <i class="bi bi-file-earmark-text"></i> Exam
-  </button>
-    <button class="btn btn-outline-primary filter-btn" data-filter="suggestion">
-    <i class="bi bi-mortarboard"></i> Suggestion
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="assignment">
-    <i class="bi bi-pencil-square"></i> Assignment
-  </button>
-    <button class="btn btn-outline-primary filter-btn" data-filter="update">
-    <i class="bi bi-arrow-up-circle"></i> Update
-  </button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="event">
-    <i class="bi bi-calendar-event"></i> Event
-  </button>
- <button class="btn btn-outline-primary filter-btn" data-filter="tips">
-  <i class="bi bi-lightbulb"></i> Tips
-</button>
-  <button class="btn btn-outline-primary filter-btn" data-filter="news">
-    <i class="bi bi-newspaper"></i> News
-  </button>
-</div>
-<div class="title">Final Exam (CSE-25) </div>
-
-<div id="examList"></div>
-
-<script>
-const exams = [
-    { date: "2025-11-25", subject: "MEE 101" },
-    { date: "2025-12-01", subject: "PHY 103" },
-    { date: "2025-12-07", subject: "ENG 101" },
-    { date: "2025-12-11", subject: "CSE 103" },
-    { date: "2025-12-15", subject: "MAT 101" },
-    { date: "2025-12-18", subject: "CSE 101" }
-];
-
-function daysLeft(examDate) {
-    const today = new Date();
-    today.setHours(0,0,0,0);
-    const exam = new Date(examDate);
-    exam.setHours(0,0,0,0);
-    const diff = exam - today;
-    return Math.ceil(diff / (1000 * 60 * 60 * 24));
-}
-
-function formatDate(d) {
-    const date = new Date(d);
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = date.toLocaleString("default", { month: "short" }).toUpperCase();
-    return `${day}<br>${month}`;
-}
-
-function gapBetweenDates(date1, date2) {
-    const d1 = new Date(date1);
-    const d2 = new Date(date2);
-    d1.setHours(0,0,0,0);
-    d2.setHours(0,0,0,0);
-
-    // Difference minus exam days
-    const gap = Math.max(0, Math.ceil((d2 - d1) / (1000 * 60 * 60 * 24)) - 1);
-
-    return gap;
-}
-
-exams.forEach((exam, index) => {
-    const left = daysLeft(exam.date);
-
-    if (left < 0) return;
-
-    const next = exams[index + 1];
-    let gapText = "";
-
-    if (next) {
-        const gap = gapBetweenDates(exam.date, next.date);
-        gapText = `<div class='next-gap'>Gap before next exam: <strong>${gap} days</strong></div>`;
-    }
-
-    const redClass = left <= 3 ? "alert-red" : "";
-    const redText = left <= 3 ? "red-text" : "";
-
-    document.getElementById("examList").innerHTML += `
-        <div class="exam-card ${redClass}">
-            <div class="row-top">
-                <div class="date-box">${formatDate(exam.date)}</div>
-                <div class="subject">${exam.subject}</div>
-                <div class="days ${redText}">${left} Days</div>
+  <!-- Main Page -->
+  <div id="mainPage" class="page" style="display: none;">
+    <div class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h1 class="app-title mb-0" id="animatedTitle"></h1>
+          <div class="d-flex align-items-center gap-3">
+            <div class="user-info">
+              <span class="user-name" id="userNameDisplay"></span>
+              <span class="user-id" id="userIdDisplay"></span>
             </div>
-            ${gapText}
+
+          </div>
         </div>
-    `;
-});
-</script>
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mt-2">
+          <div class="d-flex gap-2">
+            <input type="text" class="search-box" id="searchInput" placeholder="Search posts...">
+            <button class="filter-btn" id="bookmarkBtn">
+              <i class="bi bi-bookmark-fill"></i>
+              <span class="d-none d-md-inline">Bookmarks</span>
+            </button>
+            <button class="filter-btn" id="weeklyPopularBtn">
+              <i class="bi bi-bar-chart-line"></i>
+              <span class="d-none d-md-inline">Popular</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div class="container mt-4">
-  <!-- Posts List -->
-  <div id="postsContainer">
-    <!-- Skeleton Loaders -->
-    <div class="skeleton skeleton-card"></div>
-    <div class="skeleton skeleton-card"></div>
-    <div class="skeleton skeleton-card"></div>
-  </div>
-  <!-- Offline Popup -->
-<div id="offlinePopup" style="
-  display:none;
-  position:fixed;
-  top:180px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(255,77,79,0.8);
-  color:white;
-  backdrop-filter:blur(10px);
-  border-radius:12px;
-  padding:5px 10px;
-  font-weight:600;
-  z-index:99999;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  display:flex;
-  align-items:center;
-  gap:8px;
-">
-  <i class="bi bi-wifi-off" style="font-size:1.9rem;"></i> 
-  You are offline.
-</div>
-  <!-- Empty State -->
-  <div class="empty-state" id="emptyState" style="display: none;">
-    <i class="bi bi-file-earmark-text"></i>
-    <h4 class="mt-3">No posts found</h4>
-    <p class="text-muted">Try adjusting your filters or check back later</p>
-  </div>
-</div>
-<script>
-    let deferredPrompt;
+    <!-- Sticky + Scrollable Filter Bar -->
+    <div class="filters-row-wrapper px-3">
+      <button class="btn btn-outline-primary filter-btn active" data-filter="all">
+        <i class="bi bi-collection"></i> All
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="classes">
+        <i class="bi bi-journal-bookmark"></i> Classes
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="notice">
+        <i class="bi bi-megaphone"></i> Notice
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="important">
+        <i class="bi bi-exclamation-triangle"></i> Important
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="resources">
+        <i class="bi bi-folder2-open"></i> Resources
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="exam">
+        <i class="bi bi-file-earmark-text"></i> Exam
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="suggestion">
+        <i class="bi bi-mortarboard"></i> Suggestion
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="assignment">
+        <i class="bi bi-pencil-square"></i> Assignment
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="update">
+        <i class="bi bi-arrow-up-circle"></i> Update
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="event">
+        <i class="bi bi-calendar-event"></i> Event
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="tips">
+        <i class="bi bi-lightbulb"></i> Tips
+      </button>
+      <button class="btn btn-outline-primary filter-btn" data-filter="news">
+        <i class="bi bi-newspaper"></i> News
+      </button>
+    </div>
 
-    const promptHTML = `
-      <div class="install-prompt">
-     <div style="text-align:center;">
-    <img src="https://i.postimg.cc/7YZc66rC/icon.png" width="190px">
-    <h1 class="mb-3">
+    <div class="container mt-4">
+      <!-- Posts List -->
+      <div id="postsContainer">
+        <!-- Skeleton Loaders -->
+        <div class="skeleton skeleton-card"></div>
+        <div class="skeleton skeleton-card"></div>
+        <div class="skeleton skeleton-card"></div>
+      </div>
+      
+      <!-- Offline Popup -->
+      <div id="offlinePopup">
+        <i class="bi bi-wifi-off"></i> 
+        You are offline.
+      </div>
+      
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <i class="bi bi-file-earmark-text"></i>
+        <h4 class="mt-3">No posts found</h4>
+        <p class="text-muted">Try adjusting your filters or check back later</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Post Page -->
+  <div id="fullPostPage" class="page" style="display: none;">
+    <div class="header">
+      <div class="container d-flex align-items-center justify-content-between">
+
+        <h1 class="app-title mb-0">Post Details</h1>
+        <div class="d-flex align-items-center gap-2">
+          <span class="user-name-sm" id="fullPageUserName"></span>
+
+        </div>
+      </div>
+    </div>
+        <button class="btn btn-outline-light back-btn" onclick="goBackToMain()">
+          <i class="bi bi-arrow-left"></i> Back
+        </button>
+    <div class="container mt-4" id="fullPostContainer">
+      <!-- Full post content will be loaded here -->
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- JavaScript Files -->
+
+  <script>
+   // app.js - Fixed Authentication System
+
+let deferredPrompt;
+let currentUser = null;
+let posts = [];
+let currentFilter = 'all';
+let showOnlyNew = false;
+let userReactions = {};
+let bookmarkedPosts = [];
+let currentPostId = null;
+let postComments = {};
+let commentCounts = {};
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAkVqH_RnHoMSnEWtWlUVm3c0IGS04KjRI",
+  authDomain: "hstu-9bb0d.firebaseapp.com",
+  databaseURL: "https://hstu-9bb0d-default-rtdb.firebaseio.com",
+  projectId: "hstu-9bb0d",
+  storageBucket: "hstu-9bb0d.firebasestorage.app",
+  messagingSenderId: "115418123238",
+  appId: "1:115418123238:web:0ab52605bec3d8bd9fe427",
+  measurementId: "G-5XPHY7Z7WV"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
+const auth = firebase.auth();
+
+// DOM Elements
+const authPage = document.getElementById('authPage');
+const mainPage = document.getElementById('mainPage');
+const fullPostPage = document.getElementById('fullPostPage');
+const postsContainer = document.getElementById('postsContainer');
+const emptyState = document.getElementById('emptyState');
+const searchInput = document.getElementById('searchInput');
+const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+const particlesContainer = document.getElementById('particles');
+const offlinePopup = document.getElementById('offlinePopup');
+const bookmarkBtn = document.getElementById('bookmarkBtn');
+const weeklyPopularBtn = document.getElementById('weeklyPopularBtn');
+const fullPostContainer = document.getElementById('fullPostContainer');
+const userNameDisplay = document.getElementById('userNameDisplay');
+const userIdDisplay = document.getElementById('userIdDisplay');
+const fullPageUserName = document.getElementById('fullPageUserName');
+const loginError = document.getElementById('loginError');
+const signupError = document.getElementById('signupError');
+
+// PWA Installation
+const promptHTML = `
+  <div class="install-prompt">
+    <div style="text-align:center;">
+      <img src="https://i.postimg.cc/7YZc66rC/icon.png" width="190px">
+      <h1 class="mb-3">
         <span style="color:#e17055; font-family:'Bitcount Grid Double', system-ui;font-size:40px">
             SASTC Desk
         </span>
-    </h1>
-</div>
-        <div class="filter-bar">
-          <div class="type-classes"><i class="bi bi-journal-bookmark"></i> Classes</div>
-          <div class="type-notice"><i class="bi bi-megaphone"></i> Notice</div>
-          <div class="type-important"><i class="bi bi-exclamation-triangle"></i> Important</div>
-          <div class="type-update"><i class="bi bi-arrow-up-circle"></i> Update</div>
-          <div class="type-assignment"><i class="bi bi-pencil-square"></i> Assignment</div>
-          <div class="type-exam"><i class="bi bi-file-earmark-text"></i> Exam</div>
-          <div class="type-resources"><i class="bi bi-folder2-open"></i> Resources</div>
-          <div class="type-event"><i class="bi bi-calendar-event"></i> Event</div>
-          <div class="type-tips"><i class="bi bi-lightbulb"></i> Tips</div>
-          <div class="type-suggestion"><i class="bi bi-mortarboard"></i> Suggestion </div>
-          <div class="type-news"><i class="bi bi-newspaper"></i> News</div>
-        </div>
-        <p class="mb-4">Get the best experience by installing our app on your device (Use Chrome Browser) </p>
-        <button id="install-button" class="btn btn-light btn-lg text-dark fw-bold">Install Now</button>
-      </div>
-    `;
-    document.body.insertAdjacentHTML('beforeend', promptHTML);
+      </h1>
+    </div>
+    <div class="filter-bar">
+      <div class="type-classes"><i class="bi bi-journal-bookmark"></i> Classes</div>
+      <div class="type-notice"><i class="bi bi-megaphone"></i> Notice</div>
+      <div class="type-important"><i class="bi bi-exclamation-triangle"></i> Important</div>
+      <div class="type-update"><i class="bi bi-arrow-up-circle"></i> Update</div>
+      <div class="type-assignment"><i class="bi bi-pencil-square"></i> Assignment</div>
+      <div class="type-exam"><i class="bi bi-file-earmark-text"></i> Exam</div>
+      <div class="type-resources"><i class="bi bi-folder2-open"></i> Resources</div>
+      <div class="type-event"><i class="bi bi-calendar-event"></i> Event</div>
+      <div class="type-tips"><i class="bi bi-lightbulb"></i> Tips</div>
+      <div class="type-suggestion"><i class="bi bi-mortarboard"></i> Suggestion </div>
+      <div class="type-news"><i class="bi bi-newspaper"></i> News</div>
+    </div>
+    <p class="mb-4">Get the best experience by installing our app on your device (Use Chrome Browser) </p>
+    <button id="install-button" class="btn btn-light btn-lg text-dark fw-bold">Install Now</button>
+  </div>
+`;
 
-    const promptElement = document.querySelector('.install-prompt');
+// Only add install prompt once
+if (!document.querySelector('.install-prompt')) {
+  document.body.insertAdjacentHTML('beforeend', promptHTML);
+}
 
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
+const promptElement = document.querySelector('.install-prompt');
 
-      // Show prompt immediately
-      promptElement.style.display = 'flex';
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (promptElement) {
+    promptElement.style.display = 'flex';
+  }
 
-      document.getElementById('install-button').addEventListener('click', () => {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choiceResult) => {
-          if (choiceResult.outcome === 'accepted') {
-            console.log('User accepted the install prompt');
-          } else {
-            console.log('User dismissed the install prompt');
-          }
+  const installButton = document.getElementById('install-button');
+  if (installButton) {
+    installButton.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the install prompt');
+        } else {
+          console.log('User dismissed the install prompt');
+        }
+        if (promptElement) {
           promptElement.style.display = 'none';
-          deferredPrompt = null;
-        });
+        }
+        deferredPrompt = null;
       });
     });
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js')
-          .then(() => console.log('ServiceWorker registration successful'))
-          .catch(err => console.log('ServiceWorker registration failed:', err));
-      });
-    }
-</script>
-
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-
-<script>
-  // Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyAkVqH_RnHoMSnEWtWlUVm3c0IGS04KjRI",
-    authDomain: "hstu-9bb0d.firebaseapp.com",
-    databaseURL: "https://hstu-9bb0d-default-rtdb.firebaseio.com",
-    projectId: "hstu-9bb0d",
-    storageBucket: "hstu-9bb0d.firebasestorage.app",
-    messagingSenderId: "115418123238",
-    appId: "1:115418123238:web:0ab52605bec3d8bd9fe427",
-    measurementId: "G-5XPHY7Z7WV"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const database = firebase.database();
-
-  // DOM Elements
-  const postsContainer = document.getElementById('postsContainer');
-  const emptyState = document.getElementById('emptyState');
-  const searchInput = document.getElementById('searchInput');
-  const filterButtons = document.querySelectorAll('.filter-btn[data-filter]');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.querySelector('.lightbox-close');
-  const particlesContainer = document.getElementById('particles');
-  const offlinePopup = document.getElementById('offlinePopup');
-  const bookmarkBtn = document.getElementById('bookmarkBtn');
-  const weeklyPopularBtn = document.getElementById('weeklyPopularBtn');
-
-  // Global variables
-  let posts = [];
-  let currentFilter = 'all';
-  let showOnlyNew = false;
-  let userReactions = {};
-  let userId = localStorage.getItem('userId') || generateUserId();
-  let viewedPosts = JSON.parse(localStorage.getItem('viewedPosts') || '{}');
-  let pendingViewIncrements = JSON.parse(localStorage.getItem('pendingViewIncrements') || '[]');
-  let viewObserver = null;
-  let bookmarkedPosts = JSON.parse(localStorage.getItem('bookmarkedPosts') || '[]');
-
-  // Generate a unique user ID for reaction tracking
-  function generateUserId() {
-    const id = 'user_' + Math.random().toString(36).substr(2, 9);
-    localStorage.setItem('userId', id);
-    return id;
   }
+});
 
-  // Helper: mark & check if user viewed already
-  function hasViewed(postId) {
-    return !!viewedPosts[postId];
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('ServiceWorker registration successful'))
+      .catch(err => console.log('ServiceWorker registration failed:', err));
+  });
+}
+
+// Initialize the app
+document.addEventListener('DOMContentLoaded', () => {
+  createParticles();
+  setupEventListeners();
+  checkAuthState();
+  
+  // Check online status
+  if (!navigator.onLine) {
+    showOfflinePopup();
   }
+});
 
-  function markViewed(postId) {
-    viewedPosts[postId] = Date.now();
-    localStorage.setItem('viewedPosts', JSON.stringify(viewedPosts));
-  }
-
-  function registerView(postId) {
-    if (!postId || hasViewed(postId)) return;
-
-    // Mark locally first (so multiple triggers won't double count)
-    markViewed(postId);
-
-    // Optimistic UI: bump count instantly if element exists
-    const vc = document.querySelector(`.view-count[data-id="${postId}"]`);
-    if (vc) vc.textContent = String((parseInt(vc.textContent || '0', 10) || 0) + 1);
-
-    if (!navigator.onLine) {
-      // Queue for later
-      pendingViewIncrements.push(postId);
-      localStorage.setItem('pendingViewIncrements', JSON.stringify(pendingViewIncrements));
-      return;
-    }
-
-    // Record user->post view (to harden uniqueness on server side)
-    database.ref(`userViews/${userId}/${postId}`).set(firebase.database.ServerValue.TIMESTAMP);
-
-    // Increment post views atomically
-    database.ref(`posts/${postId}/views`).transaction(current => (current || 0) + 1);
-  }
-
-  // Flush pending view increments
-  function flushPendingViews() {
-    if (pendingViewIncrements.length) {
-      const toFlush = [...pendingViewIncrements];
-      pendingViewIncrements = [];
-      localStorage.setItem('pendingViewIncrements', JSON.stringify(pendingViewIncrements));
-      toFlush.forEach(pid => {
-        database.ref(`userViews/${userId}/${pid}`).set(firebase.database.ServerValue.TIMESTAMP);
-        database.ref(`posts/${pid}/views`).transaction(current => (current || 0) + 1);
-      });
-    }
-  }
-
-  // Initialize view observer
-  function initViewObserver() {
-    if (viewObserver) {
-      viewObserver.disconnect();
-    }
-
-    viewObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-          const postId = entry.target.getAttribute('data-post-id');
-          if (postId) registerView(postId);
-          viewObserver.unobserve(entry.target); // observe once per render
-        }
-      });
-    }, { threshold: [0.5] });
-  }
-
-  // Create floating particles
-  function createParticles() {
-    const particleCount = Math.floor(window.innerWidth / 10);
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-
-      // Random size between 1px and 3px
-      const size = Math.random() * 2 + 1;
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-
-      // Random position
-      particle.style.left = `${Math.random() * 100}%`;
-      particle.style.top = `${Math.random() * 100}%`;
-
-      // Random animation duration and delay
-      const duration = Math.random() * 15 + 10;
-      const delay = Math.random() * 5;
-      particle.style.animation = `float-particle ${duration}s ${delay}s infinite linear`;
-
-      particlesContainer.appendChild(particle);
-    }
-  }
-
-  // Bookmark functions
-  function toggleBookmark(postId) {
-    if (bookmarkedPosts.includes(postId)) {
-      bookmarkedPosts = bookmarkedPosts.filter(id => id !== postId);
+// Check authentication state
+function checkAuthState() {
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      console.log('User is signed in:', user.uid);
+      currentUser = user;
+      loadUserData();
+      showMainPage();
     } else {
-      bookmarkedPosts.push(postId);
+      console.log('No user signed in');
+      showAuthPage();
     }
-    localStorage.setItem('bookmarkedPosts', JSON.stringify(bookmarkedPosts));
-    renderPosts();
-  }
-function scrollToSharedPost() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const postId = urlParams.get('post');
+  });
+}
 
-  if (postId) {
-    // একটু delay দিয়ে যাতে DOM রেন্ডার হয়ে যায়
-    setTimeout(() => {
-      const target = document.querySelector(`.post-card[data-post-id="${postId}"]`);
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "center" });
+// Show auth page
+function showAuthPage() {
+  authPage.style.display = 'flex';
+  mainPage.style.display = 'none';
+  fullPostPage.style.display = 'none';
+}
 
-        // Highlight effect
-        target.style.transition = "box-shadow 0.5s ease, transform 0.5s ease";
-        target.style.boxShadow = "0 0 30px 5px rgba(255, 215, 0, 0.9)";
-        target.style.transform = "scale(1.02)";
+// Show main page
+function showMainPage() {
+  authPage.style.display = 'none';
+  mainPage.style.display = 'block';
+  fullPostPage.style.display = 'none';
+  
+  // Update user info display
+  updateUserInfo();
+  
+  // Load posts
+  loadPosts();
+  
+  // Start title animation
+  startTitleAnimation();
+}
 
-        // 15 সেকেন্ড পর স্বাভাবিক অবস্থায় ফিরে যাবে
-        setTimeout(() => {
-          target.style.boxShadow = "";
-          target.style.transform = "";
-        }, 15000);
-      }
-    }, 500); // delay = half second
+// Update user info display
+function updateUserInfo() {
+  if (currentUser) {
+    // Try to get user data from database first
+    database.ref(`users/${currentUser.uid}`).once('value')
+      .then((snapshot) => {
+        const userData = snapshot.val();
+        if (userData) {
+          // Save to localStorage
+          localStorage.setItem('userData', JSON.stringify(userData));
+          
+          // Update display
+          userNameDisplay.textContent = userData.name || 'User';
+          userIdDisplay.textContent = `ID: ${userData.studentId || 'N/A'}`;
+          fullPageUserName.textContent = userData.name || 'User';
+        } else {
+          // Fallback to localStorage
+          const savedData = JSON.parse(localStorage.getItem('userData') || '{}');
+          userNameDisplay.textContent = savedData.name || 'User';
+          userIdDisplay.textContent = `ID: ${savedData.studentId || 'N/A'}`;
+          fullPageUserName.textContent = savedData.name || 'User';
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching user data:', error);
+        const savedData = JSON.parse(localStorage.getItem('userData') || '{}');
+        userNameDisplay.textContent = savedData.name || 'User';
+        userIdDisplay.textContent = `ID: ${savedData.studentId || 'N/A'}`;
+        fullPageUserName.textContent = savedData.name || 'User';
+      });
   }
 }
-// Share Function
+
+// Load user data from localStorage
+function loadUserData() {
+  if (currentUser) {
+    const savedReactions = localStorage.getItem(`userReactions_${currentUser.uid}`);
+    userReactions = savedReactions ? JSON.parse(savedReactions) : {};
+    
+    const savedBookmarks = localStorage.getItem(`bookmarks_${currentUser.uid}`);
+    bookmarkedPosts = savedBookmarks ? JSON.parse(savedBookmarks) : [];
+  }
+}
+
+// Save user data to localStorage
+function saveUserData() {
+  if (currentUser) {
+    localStorage.setItem(`userReactions_${currentUser.uid}`, JSON.stringify(userReactions));
+    localStorage.setItem(`bookmarks_${currentUser.uid}`, JSON.stringify(bookmarkedPosts));
+  }
+}
+
+// Show signup form
+function showSignup() {
+  document.getElementById('loginForm').style.display = 'none';
+  document.getElementById('signupForm').style.display = 'block';
+  clearAuthErrors();
+}
+
+// Show login form
+function showLogin() {
+  document.getElementById('signupForm').style.display = 'none';
+  document.getElementById('loginForm').style.display = 'block';
+  clearAuthErrors();
+}
+
+// Clear auth errors
+function clearAuthErrors() {
+  if (loginError) loginError.style.display = 'none';
+  if (signupError) signupError.style.display = 'none';
+}
+
+// Show auth error
+function showAuthError(element, message) {
+  if (element) {
+    element.textContent = message;
+    element.style.display = 'block';
+  }
+}
+
+// Sign up function
+async function signup() {
+  const name = document.getElementById('signupName').value.trim();
+  const studentId = document.getElementById('signupStudentId').value.trim();
+  const email = document.getElementById('signupEmail').value.trim();
+  const password = document.getElementById('signupPassword').value;
+  const confirmPassword = document.getElementById('signupConfirmPassword').value;
+  
+  // Clear previous errors
+  clearAuthErrors();
+  
+  // Validation
+  if (!name) {
+    showAuthError(signupError, 'Please enter your full name');
+    return;
+  }
+  
+  if (!studentId) {
+    showAuthError(signupError, 'Please enter your student ID');
+    return;
+  }
+  
+  if (!password) {
+    showAuthError(signupError, 'Please enter a password');
+    return;
+  }
+  
+  if (password.length < 6) {
+    showAuthError(signupError, 'Password must be at least 6 characters');
+    return;
+  }
+  
+  if (password !== confirmPassword) {
+    showAuthError(signupError, 'Passwords do not match');
+    return;
+  }
+  
+  try {
+    // Create user with email (use student ID + domain if no email provided)
+    const userEmail = email || `${studentId.toLowerCase()}@sastc.edu`;
+    
+    console.log('Attempting to create user with email:', userEmail);
+    
+    const userCredential = await auth.createUserWithEmailAndPassword(userEmail, password);
+    console.log('User created successfully:', userCredential.user.uid);
+    
+    // Save user data to Firebase
+    const userData = {
+      name: name,
+      studentId: studentId,
+      email: userEmail,
+      createdAt: Date.now()
+    };
+    
+    await database.ref(`users/${userCredential.user.uid}`).set(userData);
+    console.log('User data saved to Firebase');
+    
+    // Save user data to localStorage
+    localStorage.setItem('userData', JSON.stringify(userData));
+    
+    // Update user profile
+    await userCredential.user.updateProfile({
+      displayName: name
+    });
+    
+    showToast('Account created successfully!');
+    
+    // Clear form
+    document.getElementById('signupName').value = '';
+    document.getElementById('signupStudentId').value = '';
+    document.getElementById('signupEmail').value = '';
+    document.getElementById('signupPassword').value = '';
+    document.getElementById('signupConfirmPassword').value = '';
+    
+    // User will be automatically redirected by auth state listener
+    
+  } catch (error) {
+    console.error('Signup error:', error);
+    let errorMessage = 'Signup failed. ';
+    
+    switch (error.code) {
+      case 'auth/email-already-in-use':
+        errorMessage += 'This student ID is already registered.';
+        break;
+      case 'auth/invalid-email':
+        errorMessage += 'Invalid email format.';
+        break;
+      case 'auth/operation-not-allowed':
+        errorMessage += 'Email/password accounts are not enabled.';
+        break;
+      case 'auth/weak-password':
+        errorMessage += 'Password is too weak.';
+        break;
+      default:
+        errorMessage += error.message;
+    }
+    
+    showAuthError(signupError, errorMessage);
+  }
+}
+
+// Login function
+async function login() {
+  const studentId = document.getElementById('loginStudentId').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  
+  // Clear previous errors
+  clearAuthErrors();
+  
+  if (!studentId || !password) {
+    showAuthError(loginError, 'Please enter student ID and password');
+    return;
+  }
+  
+  try {
+    // Try to login with student ID as email
+    const email = `${studentId.toLowerCase()}@sastc.edu`;
+    
+    console.log('Attempting to login with email:', email);
+    
+    const userCredential = await auth.signInWithEmailAndPassword(email, password);
+    console.log('Login successful:', userCredential.user.uid);
+    
+    // Fetch user data from database
+    const snapshot = await database.ref(`users/${userCredential.user.uid}`).once('value');
+    const userData = snapshot.val();
+    
+    if (userData) {
+      localStorage.setItem('userData', JSON.stringify(userData));
+    }
+    
+    showToast('Login successful!');
+    
+    // Clear form
+    document.getElementById('loginStudentId').value = '';
+    document.getElementById('loginPassword').value = '';
+    
+    // User will be automatically redirected by auth state listener
+    
+  } catch (error) {
+    console.error('Login error:', error);
+    let errorMessage = 'Login failed. ';
+    
+    switch (error.code) {
+      case 'auth/user-not-found':
+        errorMessage += 'Student ID not found. Please sign up first.';
+        break;
+      case 'auth/wrong-password':
+        errorMessage += 'Incorrect password.';
+        break;
+      case 'auth/invalid-email':
+        errorMessage += 'Invalid student ID format.';
+        break;
+      case 'auth/user-disabled':
+        errorMessage += 'This account has been disabled.';
+        break;
+      default:
+        errorMessage += error.message;
+    }
+    
+    showAuthError(loginError, errorMessage);
+  }
+}
+
+// Logout function
+async function logout() {
+  try {
+    await auth.signOut();
+    showToast('Logged out successfully');
+    currentUser = null;
+    
+    // Clear all user data from localStorage
+    localStorage.removeItem('userData');
+    
+    // Clear form fields
+    document.getElementById('loginStudentId').value = '';
+    document.getElementById('loginPassword').value = '';
+    
+    showAuthPage();
+  } catch (error) {
+    console.error('Logout error:', error);
+    showToast('Logout failed');
+  }
+}
+
+// Create floating particles
+function createParticles() {
+  const particleCount = Math.floor(window.innerWidth / 10);
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+
+    const size = Math.random() * 2 + 1;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100}%`;
+
+    const duration = Math.random() * 15 + 10;
+    const delay = Math.random() * 5;
+    particle.style.animation = `float-particle ${duration}s ${delay}s infinite linear`;
+
+    particlesContainer.appendChild(particle);
+  }
+}
+
+// Format text with read more link
+function shortText(text, limit = 180) {
+  if (text.length <= limit) return text;
+  return text.substring(0, limit) + 
+    `... <span class="read-more">Read more</span>`;
+}
+
+// Show full post
+function showFullPost(postId, scrollToComments = false) {
+  if (!currentUser) {
+    showToast('Please login to view post details');
+    return;
+  }
+  
+  currentPostId = postId;
+  const post = posts.find(p => p.id === postId);
+  
+  if (!post) return;
+  
+  // Hide main page, show full post page
+  mainPage.style.display = 'none';
+  fullPostPage.style.display = 'block';
+  
+  // Load post content
+  loadFullPost(post, scrollToComments);
+  
+  // If scrollToComments is true, scroll to comments after a short delay
+  if (scrollToComments) {
+    setTimeout(() => {
+      document.getElementById('commentsSection')?.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  } else {
+    // Scroll to top of full post
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// Go back to main page
+function goBackToMain() {
+  mainPage.style.display = 'block';
+  fullPostPage.style.display = 'none';
+  currentPostId = null;
+  
+  // Clear full post container
+  fullPostContainer.innerHTML = '';
+  
+  // Re-render posts to update counts
+  renderPosts();
+}
+
+// Load full post with comments
+function loadFullPost(post, scrollToComments = false) {
+  const postDate = new Date(post.createdAt);
+  const timeAgo = formatTimeAgo(postDate);
+  const commentCount = commentCounts[post.id] || 0;
+  
+  fullPostContainer.innerHTML = `
+    <div class="post-card">
+      <div class="post-meta">
+        <span class="post-type type-${post.type}">
+          ${getTypeIcon(post.type)}
+          ${post.type}
+        </span>
+        <span class="time-badge"><i class="bi bi-clock"></i> ${timeAgo}</span>
+      </div>
+      
+      <div class="mb-4">
+        <span class="post-detail-label">Title:</span>
+        <h2 class="post-title">${post.title}</h2>
+      </div>
+      
+      <div class="mb-4">
+        <span class="post-detail-label">Details:</span>
+        <div class="full-post-content">
+          ${post.content.replace(/\n/g, '<br>')}
+        </div>
+      </div>
+      
+      ${post.image ? `
+        <div class="post-image-container mb-4">
+          <img src="${post.image}" class="post-image" data-img="${post.image}" alt="Post image">
+        </div>
+      ` : ''}
+      
+      ${post.linkUrl ? `
+        <div class="mt-4 mb-4">
+          <span class="post-detail-label">Link:</span>            
+          <a href="${post.linkUrl}" target="_blank" class="link-btn">
+            <i class="bi bi-link-45deg"></i> ${post.linkTitle || 'View Link'}
+          </a>
+        </div>
+      ` : ''}
+      
+      <div class="reaction-buttons">
+        <button class="reaction-btn like ${userReactions[post.id] === 'like' ? 'active' : ''}" 
+                onclick="handleReaction('${post.id}', 'like')">
+          <i class="bi bi-hand-thumbs-up"></i>
+          <span class="like-count">${post.likes || 0}</span>
+        </button>
+        <button class="reaction-btn dislike ${userReactions[post.id] === 'dislike' ? 'active' : ''}" 
+                onclick="handleReaction('${post.id}', 'dislike')">
+          <i class="bi bi-hand-thumbs-down"></i>
+          <span class="dislike-count">${post.dislikes || 0}</span>
+        </button>
+        <button class="reaction-btn comment-btn" onclick="scrollToCommentsSection()">
+          <i class="bi bi-chat-left-text"></i>
+          <span> ${commentCount}</span>
+        </button>
+        <button class="reaction-btn bookmark ${bookmarkedPosts.includes(post.id) ? 'active' : ''}" 
+                onclick="toggleBookmark('${post.id}')">
+          <i class="bi ${bookmarkedPosts.includes(post.id) ? 'bi-bookmark-fill' : 'bi-bookmark'}"></i>
+        </button>
+        <button class="reaction-btn share-btn" onclick="handleShare('${post.id}', '${post.title.replace(/'/g, "\\'")}')">
+          <i class="bi bi-share-fill"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="comments-section" id="commentsSection">
+      <h4 class="mb-4">Comments (${commentCount})</h4>
+      <div id="commentsList" class="mb-4"></div>
+      
+      <div class="comment-form">
+        <div class="comment-input-group">
+          <input type="text" id="commentText" class="comment-input" placeholder="Write a comment..." maxlength="500">
+          <button class="comment-submit-btn" onclick="addComment()">Post Comment</button>
+        </div>
+        <small class="text-muted">Comments are posted as ${currentUser.displayName || 'Anonymous'}</small>
+      </div>
+    </div>
+  `;
+  
+  // Add event listener for image lightbox
+  const postImage = fullPostContainer.querySelector('.post-image');
+  if (postImage) {
+    postImage.addEventListener('click', (e) => {
+      showLightbox(e.currentTarget.dataset.img);
+    });
+  }
+  
+  // Load comments
+  loadCommentsForFullPost(post.id);
+  
+  // Scroll to comments if requested
+  if (scrollToComments) {
+    setTimeout(() => {
+      document.getElementById('commentsSection')?.scrollIntoView({ behavior: 'smooth' });
+    }, 500);
+  }
+}
+
+// Scroll to comments section
+function scrollToCommentsSection() {
+  const commentsSection = document.getElementById('commentsSection');
+  if (commentsSection) {
+    commentsSection.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+// Get type icon
+function getTypeIcon(type) {
+  const icons = {
+    'classes': '<i class="bi bi-journal-bookmark"></i>',
+    'notice': '<i class="bi bi-megaphone"></i>',
+    'important': '<i class="bi bi-exclamation-triangle"></i>',
+    'update': '<i class="bi bi-arrow-up-circle"></i>',
+    'assignment': '<i class="bi bi-pencil-square"></i>',
+    'exam': '<i class="bi bi-file-earmark-text"></i>',
+    'resources': '<i class="bi bi-folder2-open"></i>',
+    'event': '<i class="bi bi-calendar-event"></i>',
+    'tips': '<i class="bi bi-lightbulb"></i>',
+    'suggestion': '<i class="bi bi-mortarboard"></i>',
+    'news': '<i class="bi bi-newspaper"></i>'
+  };
+  return icons[type] || '<i class="bi bi-file-text"></i>';
+}
+
+// Load comments for full post
+function loadCommentsForFullPost(postId) {
+  const commentsList = document.getElementById('commentsList');
+  commentsList.innerHTML = '<div class="text-center py-4"><i class="bi bi-chat-text fs-3 text-muted"></i><p class="mt-2">Loading comments...</p></div>';
+  
+  database.ref(`comments/${postId}`).on('value', (snapshot) => {
+    const data = snapshot.val();
+    commentsList.innerHTML = '';
+    
+    if (!data) {
+      commentsList.innerHTML = '<div class="text-center py-4"><i class="bi bi-chat-text fs-3 text-muted"></i><p class="mt-2">No comments yet. Be the first to comment!</p></div>';
+      return;
+    }
+    
+    let count = 0;
+    Object.keys(data).forEach(commentId => {
+      const comment = data[commentId];
+      count++;
+      
+      const commentTime = formatTimeAgo(comment.time);
+      let repliesHtml = '';
+      
+      // Load replies if they exist
+      if (comment.replies) {
+        Object.keys(comment.replies).forEach(replyId => {
+          const reply = comment.replies[replyId];
+          const replyTime = formatTimeAgo(reply.time);
+          repliesHtml += `
+            <div class="reply-item">
+              <div class="comment-header">
+                <span class="comment-author">${reply.name || 'Anonymous'}</span>
+                <span class="comment-time">${replyTime}</span>
+              </div>
+              <div class="comment-text">${reply.text}</div>
+            </div>
+          `;
+        });
+      }
+      
+      const commentHtml = `
+        <div class="comment-item" data-comment-id="${commentId}">
+          <div class="comment-header">
+            <span class="comment-author">${comment.name || 'Anonymous'}</span>
+            <span class="comment-time">${commentTime}</span>
+          </div>
+          <div class="comment-text">${comment.text}</div>
+          <button class="reply-btn" onclick="showReplyForm('${commentId}')">
+            <i class="bi bi-reply"></i> Reply
+          </button>
+          <div id="reply-form-${commentId}" class="reply-form" style="display: none;">
+            <input type="text" id="reply-text-${commentId}" class="reply-input" placeholder="Write a reply..." maxlength="500">
+            <button class="comment-submit-btn" onclick="addReply('${commentId}')">Post Reply</button>
+          </div>
+          ${repliesHtml ? `<div class="reply-section">${repliesHtml}</div>` : ''}
+        </div>
+      `;
+      
+      commentsList.innerHTML += commentHtml;
+    });
+    
+    // Update comment count
+    commentCounts[postId] = count;
+  });
+}
+
+// Show reply form
+function showReplyForm(commentId) {
+  const replyForm = document.getElementById(`reply-form-${commentId}`);
+  if (replyForm) {
+    replyForm.style.display = replyForm.style.display === 'none' ? 'flex' : 'none';
+  }
+}
+
+// Add reply
+function addReply(commentId) {
+  if (!currentUser) {
+    showToast('Please login to reply');
+    return;
+  }
+  
+  const textInput = document.getElementById(`reply-text-${commentId}`);
+  if (!textInput) return;
+  
+  const text = textInput.value.trim();
+  
+  if (!text) {
+    showToast('Please write a reply');
+    return;
+  }
+  
+  if (!navigator.onLine) {
+    showToast('You need to be online to post a reply');
+    return;
+  }
+  
+  const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+  const replyData = {
+    name: userData.name || 'Anonymous',
+    text: text,
+    time: Date.now(),
+    userId: currentUser.uid
+  };
+  
+  database.ref(`comments/${currentPostId}/${commentId}/replies`).push(replyData)
+    .then(() => {
+      textInput.value = '';
+      showToast('Reply posted successfully!');
+    })
+    .catch(error => {
+      console.error('Error posting reply:', error);
+      showToast('Failed to post reply');
+    });
+}
+
+// Add comment
+function addComment() {
+  if (!currentUser) {
+    showToast('Please login to comment');
+    return;
+  }
+  
+  const textInput = document.getElementById('commentText');
+  if (!textInput) return;
+  
+  const text = textInput.value.trim();
+  
+  if (!text) {
+    showToast('Please write a comment');
+    return;
+  }
+  
+  if (!navigator.onLine) {
+    showToast('You need to be online to post a comment');
+    return;
+  }
+  
+  const userData = JSON.parse(localStorage.getItem('userData') || '{}');
+  const commentData = {
+    name: userData.name || 'Anonymous',
+    text: text,
+    time: Date.now(),
+    userId: currentUser.uid,
+    replies: {}
+  };
+  
+  database.ref(`comments/${currentPostId}`).push(commentData)
+    .then(() => {
+      textInput.value = '';
+      showToast('Comment posted successfully!');
+      
+      // Update comment count
+      commentCounts[currentPostId] = (commentCounts[currentPostId] || 0) + 1;
+      
+      // Update comment count in the button
+      const commentBtn = document.querySelector('.comment-btn span');
+      if (commentBtn) {
+        commentBtn.textContent = `Comments (${commentCounts[currentPostId]})`;
+      }
+      
+      // Update comment count in the section title
+      const commentsTitle = document.querySelector('.comments-section h4');
+      if (commentsTitle) {
+        commentsTitle.textContent = `Comments (${commentCounts[currentPostId]})`;
+      }
+    })
+    .catch(error => {
+      console.error('Error posting comment:', error);
+      showToast('Failed to post comment');
+    });
+}
+
+// Handle reaction (like/dislike)
+function handleReaction(postId, action) {
+  if (!currentUser) {
+    showToast('Please login to react');
+    return;
+  }
+  
+  if (!navigator.onLine) {
+    showToast('You need to be online to react');
+    return;
+  }
+  
+  const currentReaction = userReactions[postId];
+  
+  // If clicking the same reaction again, remove it
+  if (currentReaction === action) {
+    removeReaction(postId, action);
+    return;
+  }
+  
+  // If user already reacted differently, first remove that reaction
+  if (currentReaction && currentReaction !== action) {
+    removeReaction(postId, currentReaction);
+  }
+  
+  addReaction(postId, action);
+}
+
+// Add reaction
+function addReaction(postId, action) {
+  userReactions[postId] = action;
+  saveUserData();
+  
+  // Update UI
+  updateReactionUI(postId, action, true);
+  
+  // Update in Firebase
+  const updateData = {};
+  updateData[`posts/${postId}/${action}s`] = firebase.database.ServerValue.increment(1);
+  updateData[`userReactions/${currentUser.uid}/${postId}`] = action;
+  
+  database.ref().update(updateData)
+    .catch(error => {
+      console.error('Error updating reaction:', error);
+      showToast('Failed to update reaction');
+    });
+}
+
+// Remove reaction
+function removeReaction(postId, action) {
+  delete userReactions[postId];
+  saveUserData();
+  
+  // Update UI
+  updateReactionUI(postId, action, false);
+  
+  // Update in Firebase
+  const updateData = {};
+  updateData[`posts/${postId}/${action}s`] = firebase.database.ServerValue.increment(-1);
+  updateData[`userReactions/${currentUser.uid}/${postId}`] = null;
+  
+  database.ref().update(updateData)
+    .catch(error => {
+      console.error('Error removing reaction:', error);
+      showToast('Failed to remove reaction');
+    });
+}
+
+// Update reaction UI
+function updateReactionUI(postId, action, isAdding) {
+  // Update in main page if visible
+  const mainLikeBtn = document.querySelector(`#mainPage .reaction-btn.like[onclick*="${postId}"]`);
+  const mainDislikeBtn = document.querySelector(`#mainPage .reaction-btn.dislike[onclick*="${postId}"]`);
+  
+  if (mainLikeBtn && mainDislikeBtn) {
+    updateButtonState(mainLikeBtn, mainDislikeBtn, action, isAdding);
+  }
+  
+  // Update in full post page if visible
+  const fullLikeBtn = document.querySelector(`#fullPostPage .reaction-btn.like[onclick*="${postId}"]`);
+  const fullDislikeBtn = document.querySelector(`#fullPostPage .reaction-btn.dislike[onclick*="${postId}"]`);
+  
+  if (fullLikeBtn && fullDislikeBtn) {
+    updateButtonState(fullLikeBtn, fullDislikeBtn, action, isAdding);
+  }
+}
+
+function updateButtonState(likeBtn, dislikeBtn, action, isAdding) {
+  const likeCountEl = likeBtn.querySelector('.like-count');
+  const dislikeCountEl = dislikeBtn.querySelector('.dislike-count');
+  
+  if (action === 'like') {
+    if (isAdding) {
+      likeBtn.classList.add('active');
+      dislikeBtn.classList.remove('active');
+      if (likeCountEl) likeCountEl.textContent = parseInt(likeCountEl.textContent || '0') + 1;
+      if (dislikeCountEl && dislikeBtn.classList.contains('active')) {
+        dislikeCountEl.textContent = Math.max(0, parseInt(dislikeCountEl.textContent || '0') - 1);
+      }
+    } else {
+      likeBtn.classList.remove('active');
+      if (likeCountEl) likeCountEl.textContent = Math.max(0, parseInt(likeCountEl.textContent || '0') - 1);
+    }
+  } else {
+    if (isAdding) {
+      dislikeBtn.classList.add('active');
+      likeBtn.classList.remove('active');
+      if (dislikeCountEl) dislikeCountEl.textContent = parseInt(dislikeCountEl.textContent || '0') + 1;
+      if (likeCountEl && likeBtn.classList.contains('active')) {
+        likeCountEl.textContent = Math.max(0, parseInt(likeCountEl.textContent || '0') - 1);
+      }
+    } else {
+      dislikeBtn.classList.remove('active');
+      if (dislikeCountEl) dislikeCountEl.textContent = Math.max(0, parseInt(dislikeCountEl.textContent || '0') - 1);
+    }
+  }
+}
+
+// Toggle bookmark
+function toggleBookmark(postId) {
+  if (!currentUser) {
+    showToast('Please login to bookmark');
+    return;
+  }
+  
+  const index = bookmarkedPosts.indexOf(postId);
+  if (index > -1) {
+    // Remove bookmark
+    bookmarkedPosts.splice(index, 1);
+  } else {
+    // Add bookmark
+    bookmarkedPosts.push(postId);
+  }
+  
+  saveUserData();
+  
+  // Update UI
+  updateBookmarkUI(postId, index === -1);
+  
+  showToast(index === -1 ? 'Post bookmarked!' : 'Bookmark removed');
+}
+
+// Update bookmark UI
+function updateBookmarkUI(postId, isBookmarked) {
+  // Update in main page
+  const mainBookmarkBtn = document.querySelector(`#mainPage .reaction-btn.bookmark[onclick*="${postId}"]`);
+  if (mainBookmarkBtn) {
+    const icon = mainBookmarkBtn.querySelector('i');
+    mainBookmarkBtn.classList.toggle('active', isBookmarked);
+    icon.className = isBookmarked ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+  }
+  
+  // Update in full post page
+  const fullBookmarkBtn = document.querySelector(`#fullPostPage .reaction-btn.bookmark[onclick*="${postId}"]`);
+  if (fullBookmarkBtn) {
+    const icon = fullBookmarkBtn.querySelector('i');
+    fullBookmarkBtn.classList.toggle('active', isBookmarked);
+    icon.className = isBookmarked ? 'bi bi-bookmark-fill' : 'bi bi-bookmark';
+  }
+}
+
+// Handle share
 function handleShare(postId, title) {
   const postUrl = `${window.location.origin}${window.location.pathname}?post=${postId}`;
 
@@ -1327,95 +2449,83 @@ function handleShare(postId, title) {
   }
 }
 
-  // Initialize
-  document.addEventListener('DOMContentLoaded', () => {
-    createParticles();
-    loadUserReactions();
-    setupEventListeners();
-    startTitleAnimation();
-    initViewObserver();
+// Toast notification
+function showToast(msg) {
+  const toast = document.createElement("div");
+  toast.className = "toast-message";
+  toast.innerText = msg;
 
-    // Check online status on load
-    if (!navigator.onLine) {
-      showOfflinePopup();
-      hideReactions();
-      loadPosts(); // Load from cache if offline
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 50);
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.remove(), 300);
+  }, 2500);
+}
+
+// Title animation
+function startTitleAnimation() {
+  const texts = [
+    "SASTC DESK",
+    "Latest Notice Classes",
+    "Always Up to date",
+    "Never Miss an Update",
+    "Mehedi Al Hasan Sawon",
+    "Capture Every Moment on Campus",
+    "Knowledge at Your Fingertips",
+    "Never Miss Important Information",
+    "Instant Class Alerts",
+    "Grow Together",
+    "Your Campus Log"
+  ];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const titleElement = document.getElementById("animatedTitle");
+
+  function typeEffect() {
+    if (!titleElement) return;
+    
+    const currentText = texts[textIndex];
+    const displayedText = currentText.substring(0, charIndex);
+    titleElement.textContent = displayedText;
+
+    if (!isDeleting && charIndex < currentText.length) {
+      charIndex++;
+      setTimeout(typeEffect, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeEffect, 50);
     } else {
-      hideOfflinePopup();
-      loadPosts();
-      flushPendingViews();
-    }
-  });
-
-  // Load user reactions from Firebase
-  function loadUserReactions() {
-    if (!navigator.onLine) {
-      const localReactions = localStorage.getItem('userReactions');
-      userReactions = localReactions ? JSON.parse(localReactions) : {};
-      return;
-    }
-
-    database.ref(`userReactions/${userId}`).once('value', (snapshot) => {
-      const data = snapshot.val();
-      userReactions = data || {};
-      localStorage.setItem('userReactions', JSON.stringify(userReactions));
-    });
-  }
-
-  // Title animation
-  function startTitleAnimation() {
-    const texts = [
-      "SASTC DESK",
-      "Latest Notice Classes",
-      "Always Up to date",
-      "Never Miss an Update",
-      "Mehedi Al Hasan Sawon",
-      "Capture Every Moment on Campus",
-      "Knowledge at Your Fingertips",
-      "Never Miss Important Information",
-      "Instant Class Alerts",
-      "Grow Together",
-      "Your Campus Log"
-    ];
-
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const titleElement = document.getElementById("animatedTitle");
-
-    function typeEffect() {
-      const currentText = texts[textIndex];
-      const displayedText = currentText.substring(0, charIndex);
-      titleElement.textContent = displayedText;
-
-      if (!isDeleting && charIndex < currentText.length) {
-        charIndex++;
-        setTimeout(typeEffect, 100);
-      } else if (isDeleting && charIndex > 0) {
-        charIndex--;
-        setTimeout(typeEffect, 50);
+      if (!isDeleting) {
+        isDeleting = true;
+        setTimeout(typeEffect, 1500);
       } else {
-        if (!isDeleting) {
-          isDeleting = true;
-          setTimeout(typeEffect, 1500); // Wait before deleting
-        } else {
-          isDeleting = false;
-          textIndex = (textIndex + 1) % texts.length;
-          setTimeout(typeEffect, 500); // Wait before typing next
-        }
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(typeEffect, 500);
       }
     }
-
-    typeEffect();
   }
 
-  // Load posts from Firebase or localStorage
-  function loadPosts() {
-  // সবসময় অনলাইন ডেটা ব্যবহার করো
+  typeEffect();
+}
+
+// Load posts from Firebase
+function loadPosts() {
   database.ref('posts').on('value', (snapshot) => {
     const data = snapshot.val();
     if (data) {
       posts = formatPosts(data);
+      
+      // Load comment counts
+      loadCommentCounts();
+      
       renderPosts();
     } else {
       posts = [];
@@ -1432,444 +2542,330 @@ function handleShare(postId, title) {
   });
 }
 
-  function formatPosts(data) {
-    return Object.keys(data).map(key => ({
-      id: key,
-      ...data[key],
-      likes: data[key].likes || 0,
-      dislikes: data[key].dislikes || 0,
-      views: data[key].views || 0
-    }));
+// Load comment counts
+function loadCommentCounts() {
+  posts.forEach(post => {
+    database.ref(`comments/${post.id}`).once('value', (snapshot) => {
+      const data = snapshot.val();
+      commentCounts[post.id] = data ? Object.keys(data).length : 0;
+      
+      // Update UI if this post is currently displayed
+      if (currentPostId === post.id) {
+        const commentBtn = document.querySelector('.comment-btn span');
+        if (commentBtn) {
+          commentBtn.textContent = `Comments (${commentCounts[post.id]})`;
+        }
+      }
+    });
+  });
+}
+
+function formatPosts(data) {
+  return Object.keys(data).map(key => ({
+    id: key,
+    ...data[key],
+    likes: data[key].likes || 0,
+    dislikes: data[key].dislikes || 0,
+    views: data[key].views || 0
+  }));
+}
+
+// Render posts based on filters
+function renderPosts() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const now = new Date();
+  const twoHoursAgo = new Date(now.getTime() - (2 * 60 * 60 * 1000));
+
+  const newPosts = posts
+    .filter(post => new Date(post.createdAt) > twoHoursAgo)
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+    .slice(0, 3);
+
+  let filteredPosts = posts.filter(post => {
+    const matchesSearch = 
+      post.title.toLowerCase().includes(searchTerm) ||
+      post.content.toLowerCase().includes(searchTerm) ||
+      (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
+
+    let matchesType = true;
+    if (currentFilter === 'bookmark') {
+      matchesType = bookmarkedPosts.includes(post.id);
+    } else if (currentFilter === 'weeklyPopular') {
+      const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+      matchesType = new Date(post.createdAt) > oneWeekAgo;
+    } else if (currentFilter !== 'all') {
+      matchesType = post.type === currentFilter;
+    }
+
+    const isNew = newPosts.some(newPost => newPost.id === post.id);
+    const matchesNewFilter = !showOnlyNew || isNew;
+
+    return matchesSearch && matchesType && matchesNewFilter;
+  });
+
+  if (currentFilter === 'weeklyPopular') {
+    filteredPosts.sort((a, b) => (b.views + b.likes) - (a.views + a.likes));
+  } else {
+    filteredPosts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   }
 
-  // Set up event listeners
-  function setupEventListeners() {
-    // Search input
-    searchInput.addEventListener('input', renderPosts);
+  postsContainer.innerHTML = '';
 
-    // Filter buttons
-    filterButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentFilter = btn.dataset.filter;
-        renderPosts();
+  if (filteredPosts.length === 0) {
+    emptyState.style.display = 'block';
+  } else {
+    emptyState.style.display = 'none';
+
+    filteredPosts.forEach(post => {
+      const postDate = new Date(post.createdAt);
+      const isNew = newPosts.some(newPost => newPost.id === post.id);
+      const isBookmarked = bookmarkedPosts.includes(post.id);
+      const commentCount = commentCounts[post.id] || 0;
+
+      const postEl = document.createElement('div');
+      postEl.className = `post-card ${isNew ? 'new' : ''}`;
+      postEl.setAttribute('data-post-id', post.id);
+
+      const timeAgo = formatTimeAgo(postDate);
+
+      postEl.innerHTML = `
+        <div class="post-meta">
+          <span class="post-type type-${post.type}">
+            ${getTypeIcon(post.type)}
+            ${post.type}
+          </span>
+          <span class="time-badge"><i class="bi bi-clock"></i> ${timeAgo}</span>
+        </div>
+        
+        <div class="mb-3">
+          <span class="post-detail-label">Title:</span>
+          <h3 class="post-title">${post.title}</h3>
+        </div>
+        
+        <div class="mb-3">
+          <span class="post-detail-label">Details:</span>
+          <p class="post-content" data-id="${post.id}">
+            ${shortText(post.content)}
+          </p>
+        </div>
+        
+        ${post.image ? `
+          <div class="post-image-container">
+            <img src="${post.image}" class="post-image" data-img="${post.image}" alt="Post image">
+          </div>
+        ` : ''}
+        
+        ${post.linkUrl ? `
+          <div class="mt-3">
+            <span class="post-detail-label">Link:</span>            
+            <a href="${post.linkUrl}" target="_blank" class="link-btn">
+              <i class="bi bi-link-45deg"></i> ${post.linkTitle || 'View Link'}
+            </a>
+          </div>
+        ` : ''}
+        
+        <div class="reaction-buttons">
+          <button class="reaction-btn like ${userReactions[post.id] === 'like' ? 'active' : ''}" 
+                  onclick="handleReaction('${post.id}', 'like')">
+            <i class="bi bi-hand-thumbs-up"></i>
+            <span class="like-count">${post.likes || 0}</span>
+          </button>
+          <button class="reaction-btn dislike ${userReactions[post.id] === 'dislike' ? 'active' : ''}" 
+                  onclick="handleReaction('${post.id}', 'dislike')">
+            <i class="bi bi-hand-thumbs-down"></i>
+            <span class="dislike-count">${post.dislikes || 0}</span>
+          </button>
+          <button class="reaction-btn comment-btn" onclick="showFullPost('${post.id}', true)">
+            <i class="bi bi-chat-left-text"></i>
+            <span>${commentCount > 0 ? commentCount : ''}</span>
+          </button>
+          <button class="reaction-btn bookmark ${isBookmarked ? 'active' : ''}" 
+                  onclick="toggleBookmark('${post.id}')">
+            <i class="bi ${isBookmarked ? 'bi-bookmark-fill' : 'bi-bookmark'}"></i>
+          </button>
+          <button class="reaction-btn share-btn" onclick="handleShare('${post.id}', '${post.title.replace(/'/g, "\\'")}')">
+            <i class="bi bi-share-fill"></i>
+          </button>
+        </div>
+      `;
+
+      postsContainer.appendChild(postEl);
+    });
+
+    // Add event listener for "Read more" links
+    document.querySelectorAll('.read-more').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = this.closest('.post-card');
+        const postId = card.getAttribute('data-post-id');
+        showFullPost(postId, false);
       });
     });
 
-    // Bookmark button
-    if (bookmarkBtn) {
-      bookmarkBtn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        currentFilter = 'bookmark';
-        renderPosts();
+    // Add event listeners to images for lightbox
+    document.querySelectorAll('.post-image').forEach(img => {
+      img.addEventListener('click', (e) => {
+        showLightbox(e.currentTarget.dataset.img);
       });
-    }
+    });
+  }
+}
 
-    // Weekly popular button
-    if (weeklyPopularBtn) {
-      weeklyPopularBtn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        currentFilter = 'weeklyPopular';
-        renderPosts();
-      });
-    }
+// Show image in lightbox
+function showLightbox(imgSrc) {
+  lightboxImg.src = imgSrc;
+  lightbox.classList.add('active');
+}
 
-    // Lightbox
+// Format time ago
+function formatTimeAgo(date) {
+  const now = new Date();
+  const seconds = Math.floor((now - date) / 1000);
+
+  if (seconds < 60) return 'just now';
+
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+
+  const days = Math.floor(hours / 24);
+
+  if (days >= 7) {
+    return date.toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: 'long',
+      year: 'numeric'
+    });
+  }
+
+  return `${days}d ago`;
+}
+
+// Set up event listeners
+function setupEventListeners() {
+  // Search input
+  if (searchInput) {
+    searchInput.addEventListener('input', renderPosts);
+  }
+
+  // Filter buttons
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.filter;
+      renderPosts();
+    });
+  });
+
+  // Bookmark button
+  if (bookmarkBtn) {
+    bookmarkBtn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      currentFilter = 'bookmark';
+      renderPosts();
+    });
+  }
+
+  // Weekly popular button
+  if (weeklyPopularBtn) {
+    weeklyPopularBtn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      currentFilter = 'weeklyPopular';
+      renderPosts();
+    });
+  }
+
+  // Lightbox
+  if (lightboxClose) {
     lightboxClose.addEventListener('click', () => {
       lightbox.classList.remove('active');
     });
+  }
 
-    // Close lightbox when clicking outside image
+  if (lightbox) {
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         lightbox.classList.remove('active');
       }
     });
+  }
 
-    // Close lightbox with Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+  // Keyboard shortcuts
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (lightbox.classList.contains('active')) {
         lightbox.classList.remove('active');
+      } else if (fullPostPage && fullPostPage.style.display === 'block') {
+        goBackToMain();
       }
-    });
+    }
+  });
 
-    // Network status events
-    window.addEventListener('offline', () => {
-      showOfflinePopup();
-      hideReactions();
-    });
+  // Network status
+  window.addEventListener('offline', () => {
+    showOfflinePopup();
+  });
 
-    window.addEventListener('online', () => {
-      hideOfflinePopup();
-      showReactions();
-      flushPendingViews();
-      loadPosts(); // Refresh data when coming back online
-    });
-  }
+  window.addEventListener('online', () => {
+    hideOfflinePopup();
+  });
+}
 
-  // Show/hide offline popup
-  function showOfflinePopup() {
+// Show/hide offline popup
+function showOfflinePopup() {
+  if (offlinePopup) {
     offlinePopup.style.display = 'flex';
+    setTimeout(() => {
+      hideOfflinePopup();
+    }, 3000);
   }
+}
 
-  function hideOfflinePopup() {
+function hideOfflinePopup() {
+  if (offlinePopup) {
     offlinePopup.style.display = 'none';
   }
-
-  // Show/hide reaction buttons
-  function hideReactions() {
-    document.querySelectorAll('.reaction-buttons').forEach(btnGroup => {
-      btnGroup.style.display = 'none';
-    });
-  }
-
-  function showReactions() {
-    document.querySelectorAll('.reaction-buttons').forEach(btnGroup => {
-      btnGroup.style.display = 'flex';
-    });
-  }
-
-  // Show image in lightbox
-  function showLightbox(imgSrc) {
-    lightboxImg.src = imgSrc;
-    lightbox.classList.add('active');
-  }
-
-  // Render posts based on filters
-  function renderPosts() {
-    const searchTerm = searchInput.value.toLowerCase();
-    const now = new Date();
-    const twoHoursAgo = new Date(now.getTime() - (2 * 60 * 60 * 1000));
-   // At the very end of renderPosts()
-scrollToSharedPost(); 
-    // Get the newest posts from the last 2 hours
-    const newPosts = posts
-      .filter(post => new Date(post.createdAt) > twoHoursAgo)
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-      .slice(0, 3);
-
-    let filteredPosts = posts.filter(post => {
-      // Filter by search term (includes hidden tags)
-      const matchesSearch = 
-        post.title.toLowerCase().includes(searchTerm) ||
-        post.content.toLowerCase().includes(searchTerm) ||
-        (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
-
-      // Filter by type or special filters
-      let matchesType = true;
-      if (currentFilter === 'bookmark') {
-        matchesType = bookmarkedPosts.includes(post.id);
-      } else if (currentFilter === 'weeklyPopular') {
-        const oneWeekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-        matchesType = new Date(post.createdAt) > oneWeekAgo;
-      } else if (currentFilter !== 'all') {
-        matchesType = post.type === currentFilter;
-      }
-
-      // Filter by new posts (only show the 3 newest from last hour if filter is on)
-      const isNew = newPosts.some(newPost => newPost.id === post.id);
-      const matchesNewFilter = !showOnlyNew || isNew;
-
-      return matchesSearch && matchesType && matchesNewFilter;
-    });
-
-    // Sort based on filter
-    if (currentFilter === 'weeklyPopular') {
-      filteredPosts.sort((a, b) => (b.views + b.likes) - (a.views + a.likes));
-    } else {
-      filteredPosts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-    }
-
-    postsContainer.innerHTML = '';
-
-    if (filteredPosts.length === 0) {
-      emptyState.style.display = 'block';
-    } else {
-      emptyState.style.display = 'none';
-
-      filteredPosts.forEach(post => {
-        const postDate = new Date(post.createdAt);
-        const isNew = newPosts.some(newPost => newPost.id === post.id);
-        const isBookmarked = bookmarkedPosts.includes(post.id);
-
-        const postEl = document.createElement('div');
-        postEl.className = `post-card ${isNew ? 'new' : ''}`;
-        postEl.setAttribute('data-post-id', post.id);
-
-        // Format time ago
-        const timeAgo = formatTimeAgo(postDate);
-
-        postEl.innerHTML = `
-          <div class="post-meta">
-            <span class="post-type type-${post.type}">
-${post.type === 'classes' ? '<i class="bi bi-journal-bookmark"></i>' : ''}
-${post.type === 'notice' ? '<i class="bi bi-megaphone"></i>' : ''}
-${post.type === 'important' ? '<i class="bi bi-exclamation-triangle"></i>' : ''}
-${post.type === 'update' ? '<i class="bi bi-arrow-up-circle"></i>' : ''}
-${post.type === 'assignment' ? '<i class="bi bi-pencil-square"></i>' : ''}
-${post.type === 'exam' ? '<i class="bi bi-file-earmark-text"></i>' : ''}
-${post.type === 'resources' ? '<i class="bi bi-folder2-open"></i>' : ''}
-${post.type === 'event' ? '<i class="bi bi-calendar-event"></i>' : ''}
-${post.type === 'tips' ? '<i class="bi bi-lightbulb"></i>' : ''}
-${post.type === 'suggestion' ? '<i class="bi bi-mortarboard"></i>' : ''}
-${post.type === 'news' ? '<i class="bi bi-newspaper"></i>' : ''}
-              ${post.type}
-            </span>
-            <span class="time-badge"><i class="bi bi-clock"></i> ${timeAgo}</span>
-          </div>
-          
-          <div class="mb-3">
-            <span class="post-detail-label">Title:</span>
-            <h3 class="post-title">${post.title}</h3>
-          </div>
-          
-          <div class="mb-3">
-            <span class="post-detail-label">Details:</span>
-            <h5 class="post-content">${post.content}</h5>
-          </div>
-          
-          ${post.image ? `
-            <div class="post-image-container">
-              <img src="${post.image}" class="post-image" data-img="${post.image}" alt="Post image">
-            </div>
-          ` : ''}
-          
-          ${post.linkUrl ? `
-            <div class="mt-3">
-            <span class="post-detail-label">Link:</span>            
-              <a href="${post.linkUrl}" target="_blank" class="link-btn">
-                <i class="bi bi-link-45deg"></i> ${post.linkTitle || 'View Link'}
-              </a>
-            </div>
-          ` : ''}
-          
-          <div class="reaction-buttons">
-            <button class="reaction-btn like ${userReactions[post.id] === 'like' ? 'active' : ''}" 
-                    data-id="${post.id}" data-action="like">
-              <i class="bi bi-hand-thumbs-up"></i>
-              <span class="like-count">${post.likes || 0}</span>
-            </button>
-            <button class="reaction-btn dislike ${userReactions[post.id] === 'dislike' ? 'active' : ''}" 
-                    data-id="${post.id}" data-action="dislike">
-              <i class="bi bi-hand-thumbs-down"></i>
-              <span class="dislike-count">${post.dislikes || 0}</span>
-            </button>
-            <div class="reaction-btn" style="pointer-events:none; opacity:.9;">
-              <i class="bi bi-eye"></i>
-              <span class="view-count" data-id="${post.id}">${post.views || 0}</span>
-            </div>
-            <button class="reaction-btn bookmark ${isBookmarked ? 'active' : ''}" 
-                    data-id="${post.id}" onclick="toggleBookmark('${post.id}')">
-              <i class="bi ${isBookmarked ? 'bi-bookmark-fill' : 'bi-bookmark'}"></i>
-            </button>
-            <button class="reaction-btn share-btn" data-id="${post.id}" data-title="${post.title.replace(/"/g, '&quot;')}">
-              <i class="bi bi-share-fill"></i>
-            </button>
-          </div>
-        `;
-
-        postsContainer.appendChild(postEl);
-      });
-
-      // Add event listeners to reaction buttons
-      document.querySelectorAll('.reaction-btn').forEach(btn => {
-        if (btn.dataset.action) { // Only like/dislike buttons
-          btn.addEventListener('click', handleReaction);
-        }
-      });
-
-      // Add event listeners to share buttons
-      document.querySelectorAll('.share-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          const postId = e.currentTarget.dataset.id;
-          const title = e.currentTarget.dataset.title;
-          handleShare(postId, title);
-        });
-      });
-
-      // Add event listeners to images for lightbox
-      document.querySelectorAll('.post-image').forEach(img => {
-        img.addEventListener('click', (e) => {
-          showLightbox(e.currentTarget.dataset.img);
-        });
-      });
-
-      // Observe posts for view tracking
-      document.querySelectorAll('.post-card').forEach(card => {
-        const postId = card.getAttribute('data-post-id');
-        if (postId && !hasViewed(postId)) {
-          viewObserver.observe(card);
-        }
-      });
-    }
-  }
-
-  // Handle like/dislike reactions
-  function handleReaction(e) {
-    if (!navigator.onLine) {
-      return;
-    }
-
-    const postId = e.currentTarget.dataset.id;
-    const action = e.currentTarget.dataset.action;
-    const currentReaction = userReactions[postId];
-
-    // If clicking the same reaction again, remove it
-    if (currentReaction === action) {
-      removeReaction(postId, action);
-      return;
-    }
-
-    // If user already reacted differently, first remove that reaction
-    if (currentReaction && currentReaction !== action) {
-      removeReaction(postId, currentReaction);
-    }
-
-    // Add new reaction
-    addReaction(postId, action);
-  }
-
-  function addReaction(postId, action) {
-    // Update UI immediately
-    const btn = document.querySelector(`.reaction-btn[data-id="${postId}"][data-action="${action}"]`);
-    if (btn) {
-      // Clear any existing reaction UI
-      document.querySelectorAll(`.reaction-btn[data-id="${postId}"]`).forEach(b => {
-        if (b.dataset.action) { // Only like/dislike buttons
-          b.classList.remove('active');
-        }
-      });
-
-      // Set new reaction UI
-      btn.classList.add('active');
-
-      // Update counts
-      const countEl = btn.querySelector(`.${action}-count`);
-      countEl.textContent = parseInt(countEl.textContent) + 1;
-
-      // Update opposite count if switching reactions
-      const oppositeAction = action === 'like' ? 'dislike' : 'like';
-      const oppositeBtn = document.querySelector(`.reaction-btn[data-id="${postId}"][data-action="${oppositeAction}"]`);
-      if (oppositeBtn && userReactions[postId] === oppositeAction) {
-        const oppositeCountEl = oppositeBtn.querySelector(`.${oppositeAction}-count`);
-        oppositeCountEl.textContent = parseInt(oppositeCountEl.textContent) - 1;
-      }
-
-      // Update local state
-      userReactions[postId] = action;
-      localStorage.setItem('userReactions', JSON.stringify(userReactions));
-
-      // Update Firebase
-      database.ref(`userReactions/${userId}/${postId}`).set(action);
-      database.ref(`posts/${postId}/${action}s`).transaction(current => (current || 0) + 1);
-
-      // If switching reactions, decrement the opposite count in Firebase
-      if (userReactions[postId] === oppositeAction) {
-        database.ref(`posts/${postId}/${oppositeAction}s`).transaction(current => (current || 0) - 1);
-      }
-    }
-  }
-
-  function removeReaction(postId, action) {
-    // Update UI immediately
-    const btn = document.querySelector(`.reaction-btn[data-id="${postId}"][data-action="${action}"]`);
-    if (btn) {
-      btn.classList.remove('active');
-
-      const countEl = btn.querySelector(`.${action}-count`);
-      countEl.textContent = parseInt(countEl.textContent) - 1;
-
-      // Update local state
-      delete userReactions[postId];
-      localStorage.setItem('userReactions', JSON.stringify(userReactions));
-
-      // Update Firebase
-      database.ref(`userReactions/${userId}/${postId}`).remove();
-      database.ref(`posts/${postId}/${action}s`).transaction(current => (current || 0) - 1);
-    }
-  }
-
-  // Helper function
-  function showToast(msg) {
-  const toast = document.createElement("div");
-  toast.className = "toast-message";
-  toast.innerText = msg;
-
-  document.body.appendChild(toast);
-
-  // show
-  setTimeout(() => {
-    toast.classList.add("show");
-  }, 50);
-
-  // hide after 2.5s
-  setTimeout(() => {
-    toast.classList.remove("show");
-    setTimeout(() => toast.remove(), 300);
-  }, 2500);
 }
-  function formatTimeAgo(date) {
-    const now = new Date();
-    const seconds = Math.floor((now - date) / 1000);
 
-    if (seconds < 60) return 'just now';
+// Security measures
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('selectstart', (e) => e.preventDefault());
+document.addEventListener('copy', (e) => e.preventDefault());
 
-    const minutes = Math.floor(seconds / 60);
-    if (minutes < 60) return `${minutes}m ago`;
-
-    const hours = Math.floor(minutes / 60);
-    if (hours < 24) return `${hours}h ago`;
-
-    const days = Math.floor(hours / 24);
-
-    // If more than 7 days, return the date
-    if (days >= 7) {
-      return date.toLocaleDateString('en-GB', {
-        day: '2-digit',
-        month: 'long',
-        year: 'numeric'
-      });
-    }
-
-    return `${days}d ago`;
+document.addEventListener('keydown', function (e) {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C" || e.key === "K")) ||
+    (e.ctrlKey && e.key === "U") ||
+    (e.ctrlKey && e.key === "S") ||
+    (e.metaKey && e.key === "S")
+  ) {
+    e.preventDefault();
+    return false;
   }
+});
 
-  // Security measures
-  document.addEventListener('contextmenu', (e) => e.preventDefault());
-  document.addEventListener('selectstart', (e) => e.preventDefault());
-  document.addEventListener('copy', (e) => e.preventDefault());
+// Detect DevTools (basic protection)
+let devToolsOpen = false;
+const devToolsChecker = new Image();
+Object.defineProperty(devToolsChecker, 'id', {
+  get: function() {
+    devToolsOpen = true;
+    return 'devToolsDetected';
+  }
+});
 
-  document.addEventListener('keydown', function (e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C" || e.key === "K")) ||
-      (e.ctrlKey && e.key === "U") ||
-      (e.ctrlKey && e.key === "S") ||
-      (e.metaKey && e.key === "S")
-    ) {
-      e.preventDefault();
-      return false;
-    }
-  });
-
-  // Detect DevTools (simple interval hack)
-  let isDevToolsOpen = false;
-  const element = new Image();
-  Object.defineProperty(element, 'id', {
-    get: function () {
-      isDevToolsOpen = true;
-      throw new Error("DevTools detected");
-    }
-  });
-
-  setInterval(() => {
-    isDevToolsOpen = false;
-    console.dir(element);
-    if (isDevToolsOpen) {
-      document.body.innerHTML = "";
-    }
-  }, 1000);
-</script>
+setInterval(() => {
+  devToolsOpen = false;
+  console.log(devToolsChecker);
+  if (devToolsOpen) {
+    document.body.innerHTML = '<h1 style="color: white; text-align: center; margin-top: 50px;">Access Restricted</h1>';
+    throw new Error('DevTools detected');
+  }
+}, 1000);
+  </script>
 </body>
 </html>
