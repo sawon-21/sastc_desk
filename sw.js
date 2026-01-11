@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sastc~desk-v~23-11';
+const CACHE_NAME = 'sastc~desk-v~test login';
 const urlsToCache = [
   '/',
   '/index.html',
